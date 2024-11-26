@@ -1,6 +1,5 @@
 import os
 import json
-from readline import get_endidx
 
 
 class MarkdownGenerator:
@@ -8,13 +7,17 @@ class MarkdownGenerator:
     def __init__(self, data_file):
         self._readme_filename = "README.md"
         self._readme_template_filename = "README.template"
-
         with open(data_file, "r") as f:
             data = json.load(f)
             self._year = int(data["year"])
+            self._repository_url = data["repository_url"]
             self._challenge_titles = {}
             for day, challenge_title in data["challenge_titles"].items():
                 self._challenge_titles[int(day)] = challenge_title
+
+
+    def get_repository_url(self) -> str:
+        return self._repository_url()
 
     def get_year(self) -> int:
         return self._year
@@ -31,7 +34,7 @@ class MarkdownGenerator:
     def get_solution_filename(self, day: int) -> str:
         challenge_slug = self.get_challenge_slug(day)
         day_zerofill = str(day).zfill(2)
-        return f"{day_zerofill}_{challenge_slug}.py"
+        return f"{day_zerofill}_{challenge_slug}.ipynb"
 
     def get_markdown_filename(self, day: int) -> str:
         challenge_slug = self.get_challenge_slug(day)
@@ -43,18 +46,22 @@ class MarkdownGenerator:
 
     def get_aoc_solution_github_link(self, day: int) -> str:
         filename = self.get_solution_filename(day)
-        return f"https://github.com/florianbuetow/advent_of_code_{self._year}/blob/main/solutions/{filename}"
+        return f"{self.get_repository_url()}/blob/main/solutions/{filename}"
+
+    def get_aoc_dialogue_github_link(self, day: int) -> str:
+        filename = self.get_markdown_filename(day)
+        return f"{self.get_repository_url()}/blob/main/dialogues/{filename}"
 
     def get_path_to_local_solution_filename(self, day: int) -> str:
         challenge_slug = self.get_challenge_slug(day)
         day_zerofill = str(day).zfill(2)
         return f"solutions/{day_zerofill}_{challenge_slug}.py"
 
-    def get_end_of_line_starting_with(self, filename: str, startswith: str, default:str) -> str:
+    def get_end_of_line_starting_with(self, filename: str, startswith: str, default: str) -> str:
         with open(filename, "r") as f:
             for line in f:
                 line = line.strip()
-                while line.startswith("#"): # remove leading comment indicators
+                while line.startswith("#"):  # remove leading comment indicators
                     line = line[1:].strip()
                 if line.lower().startswith(startswith.lower()):
                     return line[len(startswith):].strip()
@@ -108,7 +115,7 @@ class MarkdownGenerator:
 
     def generate_markdown_table(self) -> str:
         def generate_table_header() -> str:
-            return "Day | Challenge	| Solution Code | Time Complexity | Space Complexity | Challenge Link"
+            return "Day | Challenge	| Solution Code | Solution Dialog | Time Complexity | Space Complexity | Challenge Link"
 
         def generate_row(day: int) -> str:
             day_zerofill = str(day).zfill(2)
@@ -116,13 +123,15 @@ class MarkdownGenerator:
             challenge_link = self.get_aoc_challenge_link(day)
             if self.has_been_solved(day):
                 solution_link = f"[link]({self.get_aoc_solution_github_link(day)})"
+                dialogue_link = f"[link]({self.get_aoc_dialogue_github_link(day)})"
                 time_complexity = self.get_time_complexity(day)
                 space_complexity = self.get_space_complexity(day)
             else:
                 solution_link = "Unsolved"
+                dialogue_link = "-"
                 time_complexity = "-"
                 space_complexity = "-"
-            return f"{day} | {challenge_title} | {solution_link} | | {time_complexity} | {space_complexity} | [adventofcode.com]({challenge_link})"
+            return f"{day} | {challenge_title} | {solution_link} | {dialogue_link} | {time_complexity} | {space_complexity} | [adventofcode.com]({challenge_link})"
 
         def format_markdown_table(table: list[str]) -> list[str]:
             # Find the maximum width of each column

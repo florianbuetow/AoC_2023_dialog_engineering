@@ -9,33 +9,33 @@ __Note:__ The input data for each challenge differs by user. If you are using th
 
 ## Table of Challenges
 
-| Day | Challenge                       | Solution Code | Time Complexity | Space Complexity | Challenge Link |
-|-----|---------------------------------|---------------|-----------------|------------------|----------------|
-| 1   | Trebuchet?!                     | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/1) |
-| 2   | Cube Conundrum                  | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/2) |
-| 3   | Gear Ratios                     | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/3) |
-| 4   | Scratchcards                    | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/4) |
-| 5   | If You Give A Seed A Fertilizer | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/5) |
-| 6   | Wait For It                     | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/6) |
-| 7   | Camel Cards                     | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/7) |
-| 8   | Haunted Wasteland               | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/8) |
-| 9   | Mirage Maintenance              | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/9) |
-| 10  | Pipe Maze                       | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/10) |
-| 11  | Cosmic Expansion                | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/11) |
-| 12  | Hot Springs                     | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/12) |
-| 13  | Point of Incidence              | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/13) |
-| 14  | Parabolic Reflector Dish        | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/14) |
-| 15  | Lens Library                    | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/15) |
-| 16  | The Floor Will Be Lava          | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/16) |
-| 17  | Clumsy Crucible                 | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/17) |
-| 18  | Lavaduct Lagoon                 | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/18) |
-| 19  | Aplenty                         | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/19) |
-| 20  | Pulse Propagation               | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/20) |
-| 21  | Step Counter                    | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/21) |
-| 22  | Sand Slabs                      | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/22) |
-| 23  | A Long Walk                     | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/23) |
-| 24  | Never Tell Me The Odds          | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/24) |
-| 25  | Snowverload                     | Unsolved      |                 | -                | -              | [adventofcode.com](https://adventofcode.com/2023/day/25) |
+| Day | Challenge                       | Solution Code | Solution Dialog | Time Complexity | Space Complexity | Challenge Link |
+|-----|---------------------------------|---------------|-----------------|-----------------|------------------|----------------------------------------------------------|
+| 1   | Trebuchet?!                     | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/1) |
+| 2   | Cube Conundrum                  | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/2) |
+| 3   | Gear Ratios                     | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/3) |
+| 4   | Scratchcards                    | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/4) |
+| 5   | If You Give A Seed A Fertilizer | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/5) |
+| 6   | Wait For It                     | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/6) |
+| 7   | Camel Cards                     | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/7) |
+| 8   | Haunted Wasteland               | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/8) |
+| 9   | Mirage Maintenance              | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/9) |
+| 10  | Pipe Maze                       | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/10) |
+| 11  | Cosmic Expansion                | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/11) |
+| 12  | Hot Springs                     | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/12) |
+| 13  | Point of Incidence              | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/13) |
+| 14  | Parabolic Reflector Dish        | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/14) |
+| 15  | Lens Library                    | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/15) |
+| 16  | The Floor Will Be Lava          | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/16) |
+| 17  | Clumsy Crucible                 | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/17) |
+| 18  | Lavaduct Lagoon                 | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/18) |
+| 19  | Aplenty                         | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/19) |
+| 20  | Pulse Propagation               | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/20) |
+| 21  | Step Counter                    | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/21) |
+| 22  | Sand Slabs                      | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/22) |
+| 23  | A Long Walk                     | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/23) |
+| 24  | Never Tell Me The Odds          | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/24) |
+| 25  | Snowverload                     | Unsolved      | -               | -               | -                | [adventofcode.com](https://adventofcode.com/2023/day/25) |
 
 ## Repository Structure
 
