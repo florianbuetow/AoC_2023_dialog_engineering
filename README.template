@@ -27,8 +27,10 @@ __Note:__ The input data for each challenge differs by user. If you are using th
 │   ├── dayXX.txt                   <- Main input data for each challenge
 │   ├── dayXX_sample.txt            <- Sample input from the challenge description for testing
 │   └── dayXX_test.txt              <- Additional test data (optional)
+├── dialogues                       <- Contains the solution dialog as Juptyer notebooks
+│   ├── XX_*.ipynb                  <- Juptyer notebooks for each challenge day XX=01,...,25
 └── solutions                       <- Contains Python solution scripts for each challenge
-    └── *.py                        <- Python scripts for solving individual challenges
+    └── XX_*.py                     <- Python scripts containing the solutions for each challenge day XX=01,...,25
 ```
 ---
 ## Generating this README

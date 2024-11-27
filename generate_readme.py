@@ -34,12 +34,12 @@ class MarkdownGenerator:
     def get_solution_filename(self, day: int) -> str:
         challenge_slug = self.get_challenge_slug(day)
         day_zerofill = str(day).zfill(2)
-        return f"{day_zerofill}_{challenge_slug}.ipynb"
+        return f"{day_zerofill}_{challenge_slug}.py"
 
     def get_markdown_filename(self, day: int) -> str:
         challenge_slug = self.get_challenge_slug(day)
         day_zerofill = str(day).zfill(2)
-        return f"{day_zerofill}_{challenge_slug}.md"
+        return f"{day_zerofill}_{challenge_slug}.ipynb"
 
     def get_aoc_challenge_link(self, day: int) -> str:
         return f"https://adventofcode.com/{self._year}/day/{day}"
