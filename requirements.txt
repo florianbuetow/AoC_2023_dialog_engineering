@@ -1,0 +1,2 @@
+python_dotenv
+advent-of-code-data

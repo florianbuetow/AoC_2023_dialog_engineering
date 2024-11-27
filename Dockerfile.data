@@ -1,0 +1,27 @@
+# Use a minimal base image with Python 3.11
+FROM python:3.11-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy requirements file and install dependencies
+COPY requirements.txt .
+COPY .env .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application files
+COPY . .
+
+# The folder where the downloaded data will be persisted
+VOLUME ["/app/output"]
+
+# Remove data files during build
+RUN rm -f data/day??_input.txt
+RUN rm -f /app/output/data/day??_input.txt
+
+# Run the download script to download the data
+CMD ["bash", "-c", "python download_data.py && mkdir -p /app/output/data && cp ./data/day??_input.txt /app/output/data/"]
+
+# Automatically exit the container after execution
