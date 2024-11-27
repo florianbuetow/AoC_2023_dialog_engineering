@@ -15,23 +15,85 @@ __Note:__ The input data for each challenge differs by user. If you are using th
 
 ```bash
 .
-├── Dockerfile                      <- Defines the environment for generating the README in Docker
+├── Dockerfile.readme               <- Defines the Docker environment for generating this README.md file
+├── Dockerfile.data                 <- Defines the Docker environment for downloading the advent of code data
 ├── README.md                       <- You are reading this right now
 ├── README.template                 <- Template for dynamically generating the README file
 ├── challenges.json                 <- Metadata about Advent of Code 2023 challenges
-├── generate_file_templates.py      <- Script to create consistent file templates for challenges
+├── download_data.py                <- Script to download the Advent of Code data
+├── download_data_using_docker.sh   <- Runs download_data.py inside a Docker container
 ├── generate_readme.py              <- Script to generate the README dynamically
 ├── generate_readme_using_docker.sh <- Runs generate_readme.py inside a Docker container
 ├── requirements.txt                <- Lists the Python dependencies for the project
 ├── data                            <- Contains input and sample data for challenges
-│   ├── dayXX.txt                   <- Main input data for each challenge
-│   ├── dayXX_sample.txt            <- Sample input from the challenge description for testing
-│   └── dayXX_test.txt              <- Additional test data (optional)
+│   ├── dayXX_input.txt             <- Main input data for each challenge, downloaded using the downloader
+│   ├── dayXX_sample.txt            <- Sample input manually extracted from the challenge description for testing
+│   └── dayXX_test.txt              <- Additional test data you may want to add yourself
 ├── dialogues                       <- Contains the solution dialog as Juptyer notebooks
 │   ├── XX_*.ipynb                  <- Juptyer notebooks for each challenge day XX=01,...,25
 └── solutions                       <- Contains Python solution scripts for each challenge
     └── XX_*.py                     <- Python scripts containing the solutions for each challenge day XX=01,...,25
 ```
+
+---
+# Setup
+
+To set up the project on your local machine, follow these steps:
+
+- Clone this repository.
+- Ensure that Docker is installed and running on your system.
+
+## How to Run the Advent of Code Data Downloader
+
+Advent of code has different input data for each user. This means you need to download your personal input data to solve the challenges.
+The following describes how you can download the data for all 26 days almost automatically. You need to do this only once.
+
+### Preparation
+
+- Create a `.env` file in the project root and add the following line to it:
+
+```plaintext
+AOC_SESSION=<insert_your_session_key_here>
+```
+
+This file holds your session key, which is required to download the data.
+The next section describes how you can get the session key to insert into the `.env` file.
+
+### How to Obtain Your Session Key
+
+1. Log in to the [Advent of Code website](https://adventofcode.com).
+2. Open your browser's developer tools (right-click anywhere on the page and select "Inspect" or press `F12`).
+3. Navigate to the "Application" tab (in Chrome) or "Storage" tab (in Firefox).
+4. Locate the "Cookies" section and click on `adventofcode.com`.
+5. Find the cookie named `session` and copy its value.
+6. Paste this value into your `.env` file as the `AOC_SESSION` variable.
+
+### Running the Data Downloader
+
+#### 1. Make the Bash Script Executable
+
+Run the following command to make the script executable:
+
+```bash
+chmod +x ./download_data_using_docker.sh
+```
+
+#### 2. Build and Run the Docker Container
+
+Run the following command:
+
+```bash
+./download_data_using_docker.sh
+```
+
+- This will build the Docker image and run the `download_data.py` script inside the container.
+- The script will download the Advent of Code data for the specified day and year.
+
+#### 3. Verify the Output
+
+Once the container execution is finished, the downloaded data files `day*_input.txt` will be available in `./data/` folder.
+
+
 ---
 ## Generating this README
 
@@ -56,11 +118,6 @@ or
 ```
 
 To generate the `README.md` file, follow these steps:
-
-#### 0. Prerequisites
-
-- Clone this repository.
-- Ensure that Docker is installed and running on your system.
 
 #### 1. Make the Bash Script Executable
 
