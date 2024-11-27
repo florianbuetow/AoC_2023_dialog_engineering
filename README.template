@@ -3,7 +3,7 @@
 In December 2024, I joined [Jeremy Howard's](https://jeremy.fast.ai) new course, [Solve It With Code](https://solveit.fast.ai), by [fast.ai](https://www.fast.ai). This unique program introduces a fresh approach to coding that combines iterative problem-solving with AI. It emphasizes building foundational skills without requiring a background in data structures or computer science. The course focuses on using Python (with minimal external libraries) and teaches an engineering technique that integrates AI as a collaborative tool ([source](https://solveit.fast.ai/course-details)).
 
 This repository contains my solutions to the Advent of Code 2023 challenges, crafted using the engineering process taught in the course.
-While this repository does not document the engineering process itself, it showcases the Python solutions to the challenges. The solutions are organized in the [solutions](./solutions) folder, and the input data for each challenge is stored in the [data](./data) folder.
+Beyond the solutions, you can see how each solution was developed in dialog with the AI. The solutions are organized in the [solutions](./solutions) folder, the dialogues in the [dialogues](./dialogues) folder, and the input data for each challenge is stored in the [data](./data) folder.
 
 __Note:__ The input data for each challenge differs by user. If you are using this project as a template for your own solutions, you will need to log in to the [Advent of Code](https://adventofcode.com) website to download your personal puzzle input data and use it to replace the existing files in the [./data/](./data/) folder. To update the [table of challenges](#table-of-challenges), read these [instructions](#generating-this-readme) below.
 
