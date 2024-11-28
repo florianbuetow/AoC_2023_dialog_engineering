@@ -17,7 +17,7 @@ class MarkdownGenerator:
 
 
     def get_repository_url(self) -> str:
-        return self._repository_url()
+        return self._repository_url
 
     def get_year(self) -> int:
         return self._year
@@ -103,9 +103,6 @@ class MarkdownGenerator:
                         continue
                     if in_comment:
                         continue
-
-                    # We found a non-empty line that is not a comment
-                    print("FOUND CODE LINE", line)
                     return True
 
         solution_filename = self.get_path_to_local_solution_filename(day)
